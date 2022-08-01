@@ -13,7 +13,7 @@ CREATE TABLE "public.customers" (
 
 CREATE TABLE "public.customerAddresses" (
 	"id" serial NOT NULL,
-	"customerId" serial NOT NULL,
+	"customerId" integer NOT NULL,
 	"street" TEXT NOT NULL,
 	"numbeer" integer NOT NULL,
 	"complement" TEXT NOT NULL,
@@ -173,15 +173,3 @@ ALTER TABLE "payment" ADD CONSTRAINT "payment_fk3" FOREIGN KEY ("paymentCard") R
 ALTER TABLE "productsImages" ADD CONSTRAINT "productsImages_fk0" FOREIGN KEY ("productId") REFERENCES "products"("id");
 
 ALTER TABLE "customersPayment" ADD CONSTRAINT "customersPayment_fk0" FOREIGN KEY ("customerId") REFERENCES "customers"("id");
-
-
-
-
-
-
-
-
-
-
-
-
