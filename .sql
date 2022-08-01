@@ -165,7 +165,7 @@ ALTER TABLE "receipt" ADD CONSTRAINT "receipt_fk1" FOREIGN KEY ("paymentId") REF
 ALTER TABLE "customerCart" ADD CONSTRAINT "customerCart_fk0" FOREIGN KEY ("customerId") REFERENCES "customers"("id");
 ALTER TABLE "customerCart" ADD CONSTRAINT "customerCart_fk1" FOREIGN KEY ("productsId") REFERENCES "products"("id");
 
-ALTER TABLE "payment" ADD CONSTRAINT "payment_fk0" FOREIGN KEY ("customerAdressesId") REFERENCES "customerAddresses"("customerId");
+ALTER TABLE "payment" ADD CONSTRAINT "payment_fk0" FOREIGN KEY ("customerAdressesId") REFERENCES "customerAddresses"("id");
 ALTER TABLE "payment" ADD CONSTRAINT "payment_fk1" FOREIGN KEY ("customerId") REFERENCES "customers"("id");
 ALTER TABLE "payment" ADD CONSTRAINT "payment_fk2" FOREIGN KEY ("customerCartId") REFERENCES "customerCart"("id");
 ALTER TABLE "payment" ADD CONSTRAINT "payment_fk3" FOREIGN KEY ("paymentCard") REFERENCES "customerCreditCards"("id");
@@ -173,3 +173,15 @@ ALTER TABLE "payment" ADD CONSTRAINT "payment_fk3" FOREIGN KEY ("paymentCard") R
 ALTER TABLE "productsImages" ADD CONSTRAINT "productsImages_fk0" FOREIGN KEY ("productId") REFERENCES "products"("id");
 
 ALTER TABLE "customersPayment" ADD CONSTRAINT "customersPayment_fk0" FOREIGN KEY ("customerId") REFERENCES "customers"("id");
+
+
+
+
+
+
+
+
+
+
+
+
